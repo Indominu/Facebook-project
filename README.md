@@ -1,4 +1,4 @@
-# HIBOOK-project
+# HighWook-project
 
 Vores projekt er en social media platform såsom Facebook med følgende features:
 - oprettelse af bruger
