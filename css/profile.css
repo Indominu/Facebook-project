@@ -1,0 +1,575 @@
+.topnav {
+    margin-right: -10px;
+     background-color: #3a589b;
+     overflow: hidden;
+     height: 70px;
+     margin-left: -10px;
+     margin-top: -24px;
+ }
+ /* Style the links inside the navigation bar */
+ .topnav a {
+   float: left;
+   color: #f2f2f2;
+   text-align: center;
+   padding: 9px 16px;
+   text-decoration: none;
+   font-size: 17px;
+ }
+ 
+ /* Change the color of links on hover */
+ .topnav a:hover {
+  background-color: none;
+ }
+ 
+ /* Add a color to the active/current link */
+ .topnav a.active {
+   background-color: #1b00ff;
+   color: white;
+ }
+ 
+ /* Right-aligned section inside the top navigation */
+ .topnav-right {
+   float: right;
+ }
+ /* Logud knap */
+ 
+ .logout {
+     margin-top: -25px;
+     margin-left: 1230px;
+     font: 400 15px system-ui;
+     height: 29px;
+     width: 64px;
+     color: #ffffff;
+     background-color: #0F20DB;
+     border-color: #0900FF;
+     border-radius: 10px;
+     text-align: center;
+ }
+ /* Søge feltet i navibaren*/
+ .søg{
+ font: 400 11px system-ui;
+     margin-top: -45px;
+     width: 430px;
+     height: 24px;
+     color: black;
+     margin-left: 124px;
+     font-size: 1em;
+ }
+ .søg::placeholder {
+     font-size: 1em;
+ }
+ /* Logoet i navibaren */
+ .logo{
+     margin-left: 89px;
+     margin-top: 27px;
+ 
+ }
+ /* tekst "Startside" i navibaren*/
+ .Startside{
+     margin-top: -50px;
+     margin-left: 1064px;
+     color: white;
+     font-size: 1em;
+     
+ }
+ /* tekst "brugerens navn i navibaren"*/
+ .Bruger {
+        margin-top: -49px;
+     margin-left: 981px;
+     color: white;
+     font-size: 1em;
+     
+ }
+ /* tekst "brugerens billede i navibaren"*/
+ 
+ .Brugerbillede {
+        margin-top: -43px;
+     margin-left: 964px;
+     color: white;
+     font-size: 1em;
+     border-radius: 50%;
+     
+ }
+ * {
+     box-sizing: border-box;
+ }
+ 
+ 
+ /* Create three unequal columns that floats next to each other */
+ .column {
+     float: left;
+     padding: 10px;
+     height: 300px; /* Should be removed. Only for demonstration */
+ }
+ 
+ .left{
+   width: 10%;
+ }
+ 
+ .right {
+   width: 30%;
+ }
+ .middle {
+   width: 60%;
+ }
+ 
+ /* Clear floats after the columns */
+ .row:after {
+     content: "";
+     display: table;
+     clear: both;
+ }
+ 
+ .profilbillede {
+      margin-top: 151px;
+     margin-left: -1253px;
+     border-radius: 100%;
+     border: 4px solid #fff;
+ 
+     
+ }
+ .opload{
+     margin-top: -54px;
+     color: white;
+     font-size: 1em;
+         margin-left: 251px;
+ 
+ }
+ .coverbillede {
+        margin-top: -1.2%;
+     height: 100%;
+     width: 64vw;
+     object-fit: cover;
+ }
+ /* Opslag */
+ .opslag {
+    background-color: #ffffff;
+     border-radius: 12px;
+     height: 147px;
+     padding: 34px;
+     text-align: center;
+     font-size: 35px;
+     color: white;
+     margin-top: -52px;
+     margin-left: 347px;
+     width: 500px;
+ }
+ /* Opslag navibar */
+ .opslagnavi {
+     background-color: #f5f6f7;
+      border-radius: 12px;
+     padding: 34px;
+     font-size: 15px;
+     color: black;
+     width: 500px;
+     margin-left: 347px;
+     margin-top: -1028px;
+ 
+ }
+ 
+ /* Opslag profile billede */
+ .opslagbillede {
+     margin-top: -133px;
+     margin-left: 355px;
+     color: white;
+     font-size: 1em;
+     border-radius: 50%;
+     margin-bottom: 87px;
+ }
+ /* Opslag navi text */
+ .opslagnavitext {
+     background-color: #f5f6f7;
+     border-radius: 12px;
+     font-size: 15px;
+     color: black;
+     margin-top: -26px;
+     margin-bottom: 25px;
+ }
+ /* iconer i opslaget */
+ .iconer {
+ margin-top: -61px;
+     height: 25px;
+     width: 25px;
+ }
+ /* textbox opslag */
+ .opslagtextbox {
+ margin-top: -164px;
+     margin-left: 85px;
+     height: 54px;
+     width: 500;
+     border: none;
+     overflow: hidden;
+     padding: 10px;
+     font-size: 14px;
+     display: block;
+     border-radius: 10px;
+ }
+ /* laver textboxen */
+ textarea{
+ display: block;
+     box-sizing: padding-box;
+     overflow: hidden;
+     padding: 10px;
+     width: 423px;
+     font-size: 14px;
+     margin: -145px 404px auto;
+     border-radius: 6px;
+     box-shadow: 2px 2px 8px rgba(black, .3);
+     border: 0;
+     max-height: 160px;
+     }
+ /* Opslag nederste del */
+ .opslagbottom {
+ background-color: #f5f6f7;
+     border: none;
+     color: black;
+     font-size: 14px;
+     margin: 97px 17px;
+     transition: 0.3s;
+     display: inline-block;
+     text-decoration: none;
+     cursor: pointer;
+     border-radius: 20px;
+     height: 28px;
+     width: 120px;
+ 
+ }
+ /* line imellem profil billedet og knapperne i opslag */
+ .diver {
+           margin-top: -70px;
+     margin-bottom: 83px;
+     width: 500px;
+     margin-right: -12px;
+ }
+ 
+ .upload-btn-wrapper {
+   position: relative;
+   overflow: hidden;
+   display: inline-block;
+       margin-bottom: -11px;
+ 
+ }
+ 
+ .btn {
+     background-color: #f5f6f7;
+     border: none;
+     color: black;
+     padding: 8px 20px;
+     border-radius: 20px;
+     font-size: 14px;
+     margin-left: 200;
+         margin-top: 40px;
+   
+ }
+ 
+ .upload-btn-wrapper input[type=file] {
+   font-size: 100px;
+   position: absolute;
+   left: 0;
+   top: 0;
+   opacity: 0;
+ ding: 20px;
+ }
+ .upload-btnnavi-wrapper {
+   position: relative;
+   overflow: hidden;
+   display: inline-block;
+       margin-bottom: -11px;
+ 
+ }
+ 
+ .btnnavi {
+   background-color: #f5f6f7;
+     border: none;
+     color: black;
+   padding: 8px 20px;
+  border-radius: 20px;
+   font-size: 14px;
+   
+ }
+ 
+ 
+ 
+ .opload {
+     background-color: #f5f6f7;
+     padding: 9px 4px;
+     border-radius: 20px;
+     font-size: 14px;
+     width: 179px;
+     color: black;
+     text-decoration: none;
+     cursor: pointer;
+     font-size: 14px;
+     border-radius: 20px;
+     overflow: hidden;
+     margin-top: 1%;
+     margin-left: 22%;
+ }
+ 
+ .Opdater {
+     background-color: #f5f6f7;
+     padding: 9px 4px;
+     border-radius: 20px;
+     font-size: 14px;
+     width: 179px;
+     color: black;
+     text-decoration: none;
+     cursor: pointer;
+     font-size: 14px;
+     border-radius: 20px;
+     overflow: hidden;
+     margin-left: 3vw;
+ }
+ 
+ .upload {
+ background-color: #f5f6f7;
+     padding: 9px 4px;
+     width: 179px;
+     color: black;
+     text-decoration: none;
+     cursor: pointer;
+     font-size: 14px;
+     border-radius: 20px;
+     overflow: hidden;
+     margin-top: -79px;
+     margin-left: 361px;
+ }
+ 
+ .reg {
+ 
+     background-color: #f5f6f7;
+     padding: 9px 4px;
+     width: 179px;
+     color: black;
+     text-decoration: none;
+     margin: 28px 393px;
+     cursor: pointer;
+     font-size: 14px;
+     border-radius: 20px;
+     margin-left: 605px;
+     overflow: hidden;
+ }
+ /* Opslag post */
+ .post {
+     background-color: #ffffff;
+     border-radius: 11px;
+     padding: 34px 2px 2px;
+     text-align: center;
+     font-size: 35px;
+     color: white;
+     margin-bottom: 93px;
+     height: 500px;
+     width: 500px;
+     margin-left: 347px;
+     }
+ /* Opslag post */
+ .posttext {
+     height: 147px;
+     text-align: left;
+     color: #000000;
+     padding: 48px 12px;
+     margin-bottom: 47px;
+     font-family: inherit;
+     font-size: 14px;
+     font-weight: normal;
+     line-height: 1.38;
+  }
+ .postbillede {
+     margin-top: -118px;
+     width: 100%;
+     height: 100%;
+     border-radius: 1%;
+ }
+ 
+ /* Opslag profile billede */
+ .Postprofil {
+     margin-top: -29px;
+     margin-left: -427px;
+     border-radius: 50%;
+     margin-bottom: -9px;
+ }
+ /* Opslag post */
+ .postnavn {
+  font-size: 15px;
+     color: black;
+     margin-left: -236px;
+     margin-bottom: 8px;
+     margin-top: -29px;
+ 
+ 
+ }
+ .postdato {
+ text-align: left;
+     font-size: 13px;
+     color: black;
+     margin-top: -8px;
+     margin-bottom: -38px;
+     margin-left: 66px;
+ }
+ .info {
+     background-color: #ffffff;
+     border-radius: 6px;
+     padding: 34px 2px 2px;
+     text-align: center;
+     font-size: 35px;
+     color: white;
+     margin-bottom: 93px;
+     height: 300px;
+     width: 336px;
+  }
+ .overskrift {
+     margin-top: auto;
+     color:black;
+     text-align: left;
+ }
+ .underskrift {
+       color: black;
+     text-align: left;
+     font-size: 18px;
+ 
+ }
+ .infobilleder {
+     background-color: #ffffff;
+     border-radius: 6px;
+     padding: 34px 2px 2px;
+     text-align: center;
+     font-size: 35px;
+     color: white;
+     margin-bottom: 93px;
+     height: 200px;
+     width: 336px;
+     margin-top: -76px;
+  }
+ 
+ .textbilleder {
+     color: black;
+     text-align: left;
+     margin-left: 33px;
+     margin-top: -19px;
+     font-size: 18px;
+ 
+ }
+ .infovenner {
+     background-color: #ffffff;
+     border-radius: 6px;
+     padding: 34px 2px 2px;
+     text-align: center;
+     font-size: 35px;
+     color: white;
+     margin-bottom: 93px;
+     height: 400px;
+     width: 336px;
+     margin-top: -76px;
+  }
+  ul#results{
+     list-style: none;
+     width: 131px;
+     margin: 0;
+     padding: 0;
+     display: none;
+ }
+ 
+ ul#results li a {
+     color: #000;
+     background: #fff;
+     display: block;
+     text-decoration: none;
+     position: absolute;
+     margin-left: 124px;
+     margin-top: -20px;
+     width: 430px;
+     text-align: left;
+     border-radius: 0px 0px 5px 5px;
+     box-shadow: 1px 4px 5px #676363;
+ 
+ }
+ ul#results li a:hover {
+     background: #aaa;
+ }
+ .coverbilledetext
+ {
+ 
+ border-radius: 12px;
+     font-size: 15px;
+     color: black;
+     margin-left: 300px;
+     position: absolute;
+ 
+ 
+ }
+ #profile-upload{
+     background-image:url('');
+     background-size:cover;
+     background-position: center;
+     height: 250px; width: 250px;
+     border: 1px solid #bbb;
+     position:relative;
+   border-radius:250px;
+   overflow:hidden;
+ }
+ #profile-upload:hover input.upload{
+   display:block;
+ }
+ #profile-upload:hover .hvr-profile-img{
+   display:inline-block;
+  }
+ #profile-upload .fa{   margin: auto;
+     position: absolute;
+     bottom: -4px;
+     left: 0;
+     text-align: center;
+     right: 0;
+     padding: 6px;
+    opacity:1;
+   transition:opacity 1s linear;
+    -webkit-transform: scale(.75); 
+  
+  
+ }
+ #profile-upload:hover .fa{
+    opacity:1;
+    -webkit-transform: scale(1); 
+ }
+ #profile-upload input.upload {
+     z-index:1;
+     left: 0;
+     margin: 0;
+     bottom: 0;
+     top: 0;
+     padding: 0;
+     opacity: 0;
+     outline: none;
+     cursor: pointer;
+     position: absolute;
+     background:#ccc;
+     width:100%;
+     display:none;
+ }
+ 
+ #profile-upload .hvr-profile-img {
+   width:100%;
+   height:100%;
+   display: none;
+   position:absolute;
+   vertical-align: middle;
+   position: relative;
+   background: transparent;
+  }
+ #profile-upload .fa:after {
+     content: "";
+     position:absolute;
+     bottom:0; left:0;
+     width:100%; height:0px;
+     background:rgba(0,0,0,0.3);
+     z-index:-1;
+     transition: height 0.3s;
+     }
+ 
+ #profile-upload:hover .fa:after { height:100%; }
+ 
+ 
+ 
+ 
+ 
+ 
+ 
