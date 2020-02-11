@@ -1,10 +1,9 @@
-
 <?php
     // Database configuration
-    $dbHost     = "172.16.115.20";
+    $dbHost = "172.16.115.20";
     $dbUsername = "Highwook";
     $dbPassword = "Password1";
-    $dbName     = "HighWook";
+    $dbName = "HighWook";
     
     // Create database connection
     $conn = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);
@@ -13,4 +12,5 @@
     if ( $conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }
-    ?>
+
+?>
