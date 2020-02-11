@@ -1,9 +1,9 @@
 <?php
     // Database configuration
-    $dbHost     = "anightabovethemall.com.mysql.service.one.com";
-    $dbUsername = "anightabovethemall_comhighbook";
+    $dbHost = "172.16.115.20";
+    $dbUsername = "Highwook";
     $dbPassword = "Password1";
-    $dbName     = "anightabovethemall_comhighbook";
+    $dbName = "HighWook";
     
     // Create database connection
     $conn = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);
