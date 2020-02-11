@@ -35,7 +35,7 @@
 
 .logout {
     margin-top: -25px;
-    margin-left: 90vw;
+    margin-left: 1230px;
     font: 400 15px system-ui;
     height: 29px;
     width: 64px;
@@ -48,14 +48,12 @@
 /* Søge feltet i navibaren*/
 .søg{
 font: 400 11px system-ui;
-    margin-top: -4.5%;
+    margin-top: -45px;
     width: 430px;
     height: 24px;
     color: black;
-    margin-left: 4vw;
+    margin-left: 124px;
     font-size: 1em;
-    position: absolute;
-    z-index: 88;
 }
 .søg::placeholder {
     font-size: 1em;
@@ -68,20 +66,16 @@ font: 400 11px system-ui;
 }
 /* tekst "Startside" i navibaren*/
 .Startside{
-  margin-top: -4.5%;
-    position: absolute;
-    z-index: 46;
-    margin-left: 71vw;
+    margin-top: -50px;
+    margin-left: 1064px;
     color: white;
     font-size: 1em;
     
 }
 /* tekst "brugerens navn i navibaren"*/
 .Bruger {
- margin-top: -4.5%;
-    position: absolute;
-    z-index: 45;
-    margin-left: 65vw;
+       margin-top: -49px;
+    margin-left: 981px;
     color: white;
     font-size: 1em;
     
@@ -89,36 +83,36 @@ font: 400 11px system-ui;
 /* tekst "brugerens billede i navibaren"*/
 
 .Brugerbillede {
-margin-top: -4.5%;
-    margin-left: 62vw;
+       margin-top: -43px;
+    margin-left: 964px;
     color: white;
     font-size: 1em;
     border-radius: 50%;
-    position: absolute;
-    z-index: 88;
     
 }
 * {
     box-sizing: border-box;
 }
 
-
 /* Create three unequal columns that floats next to each other */
 .column {
     float: left;
     padding: 10px;
     height: 300px; /* Should be removed. Only for demonstration */
+
 }
 
-.left{
-  width: 10%;
+.left {
+    width: 20%;
+    background-color: #e9ebee;
+}
+.right{
+    width: 30%;
 }
 
-.right {
-  width: 30%;
-}
 .middle {
-  width: 60%;
+    width: 50%;
+       margin-left: -55px;
 }
 
 /* Clear floats after the columns */
@@ -127,27 +121,44 @@ margin-top: -4.5%;
     display: table;
     clear: both;
 }
-
-.profilbillede {
-     margin-top: 151px;
-    margin-left: -1253px;
-    border-radius: 100%;
-    border: 4px solid #fff;
-
-    
+/* Brugens navn i bodyen */
+.Brugerbody {
+    margin-top: 8px;
+    margin-left: 92px;
+    color: #272b33;
+    font-size: 0.9em;
 }
-.opload{
-    margin-top: -54px;
+/* Brugens billede i bodyen */
+
+.Brugerbilledebody {
+margin-top: 0vh;
+    margin-left: -8vw;
+    margin-bottom: 30;
     color: white;
     font-size: 1em;
-        margin-left: 251px;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 984;
 
 }
-.coverbillede {
-       margin-top: -1.2%;
-    height: 100%;
-    width: 64vw;
-    object-fit: cover;
+/* messengerside hjøre side */
+.messenger {
+margin-left: 92px;
+margin-top: -17px;
+    color: #272b33;
+}
+/* messengerside hjøre side */
+.messengerbillede {
+   margin-left: 67px;
+    margin-top: -34px;
+}
+/* Genveje tekst */
+.Udforsk {
+margin-left: 67px;
+margin-top: -17px;
+margin-bottom: 23px;
+    color: #616770;
+    font-size: 0.8em;
 }
 /* Opslag */
 .opslag {
@@ -159,8 +170,6 @@ margin-top: -4.5%;
     font-size: 35px;
     color: white;
     margin-top: -52px;
-    margin-left: 347px;
-    width: 500px;
 }
 /* Opslag navibar */
 .opslagnavi {
@@ -169,16 +178,12 @@ margin-top: -4.5%;
     padding: 34px;
     font-size: 15px;
     color: black;
-    width: 500px;
-    margin-left: 347px;
-    margin-top: -1028px;
-
 }
 
 /* Opslag profile billede */
 .opslagbillede {
     margin-top: -133px;
-    margin-left: 355px;
+    margin-left: 28px;
     color: white;
     font-size: 1em;
     border-radius: 50%;
@@ -195,9 +200,9 @@ margin-top: -4.5%;
 }
 /* iconer i opslaget */
 .iconer {
-margin-top: -61px;
-    height: 25px;
-    width: 25px;
+    margin-top: -112px;
+        height: 16px;
+    width: 16px;
 }
 /* textbox opslag */
 .opslagtextbox {
@@ -218,9 +223,9 @@ display: block;
     box-sizing: padding-box;
     overflow: hidden;
     padding: 10px;
-    width: 423px;
+       width: 30vw;
     font-size: 14px;
-    margin: -145px 404px auto;
+    margin: -145px 80px auto;
     border-radius: 6px;
     box-shadow: 2px 2px 8px rgba(black, .3);
     border: 0;
@@ -245,11 +250,8 @@ background-color: #f5f6f7;
 }
 /* line imellem profil billedet og knapperne i opslag */
 .diver {
-          margin-top: -70px;
+       margin-top: -70px;
     margin-bottom: 83px;
-    width: 500px;
-    margin-right: -12px;
-}
 }
 .upload-btn-wrapper {
   position: relative;
@@ -297,80 +299,47 @@ ding: 20px;
   
 }
 
+input[type=button], input[type=submit], input[type=reset] {
+    background-color: #f5f6f7;
+    border: none;
+    color: black;
+    padding: 7px 33px;
+    text-decoration: none;
+
+    margin-left: 22vw;
+    margin-top: 7.5%;
+    cursor: pointer;
+    font-size: 85%;
+    border-radius: 20px;
+    overflow: hidden;
+}
 
 
 .opload {
     background-color: #f5f6f7;
+    border: none;
+    color: black;
     padding: 9px 4px;
     border-radius: 20px;
     font-size: 14px;
-    width: 179px;
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-    font-size: 14px;
-    border-radius: 20px;
-    overflow: hidden;
-    margin-top: 1%;
-    margin-left: 22%;
-}
+    /* margin-left: 0vw; */
+    margin-top: 5.6%;
+    width: 15vw;
+    position: absolute;
+    z-index: 999;
 
-.Opdater {
-    background-color: #f5f6f7;
-    padding: 9px 4px;
-    border-radius: 20px;
-    font-size: 14px;
-    width: 179px;
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-    font-size: 14px;
-    border-radius: 20px;
-    overflow: hidden;
-    margin-left: 3vw;
-}
-
-.upload {
-background-color: #f5f6f7;
-    padding: 9px 4px;
-    width: 179px;
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-    font-size: 14px;
-    border-radius: 20px;
-    overflow: hidden;
-    margin-top: -79px;
-    margin-left: 361px;
-}
-
-.reg {
-
-    background-color: #f5f6f7;
-    padding: 9px 4px;
-    width: 179px;
-    color: black;
-    text-decoration: none;
-    margin: 28px 393px;
-    cursor: pointer;
-    font-size: 14px;
-    border-radius: 20px;
-    margin-left: 605px;
-    overflow: hidden;
 }
 /* Opslag post */
 .post {
-    background-color: #ffffff;
-    border-radius: 11px;
-    padding: 34px 2px 2px;
+   background-color: #ffffff;
+    border-radius: 6px;
+    padding:34px 2px 2px;
     text-align: center;
     font-size: 35px;
     color: white;
     margin-bottom: 93px;
     height: 500px;
-    width: 500px;
-    margin-left: 347px;
-    }
+}
 /* Opslag post */
 .posttext {
     height: 147px;
@@ -387,13 +356,12 @@ background-color: #f5f6f7;
     margin-top: -118px;
     width: 100%;
     height: 100%;
-    border-radius: 1%;
 }
 
 /* Opslag profile billede */
 .Postprofil {
     margin-top: -29px;
-    margin-left: -427px;
+    margin-left: -618px;
     border-radius: 50%;
     margin-bottom: -9px;
 }
@@ -401,7 +369,7 @@ background-color: #f5f6f7;
 .postnavn {
  font-size: 15px;
     color: black;
-    margin-left: -236px;
+    margin-left: -433px;
     margin-bottom: 8px;
     margin-top: -29px;
 
@@ -415,62 +383,7 @@ text-align: left;
     margin-bottom: -38px;
     margin-left: 66px;
 }
-.info {
-    background-color: #ffffff;
-    border-radius: 6px;
-    padding: 34px 2px 2px;
-    text-align: center;
-    font-size: 35px;
-    color: white;
-    margin-bottom: 93px;
-    height: 300px;
-    width: 336px;
- }
-.overskrift {
-    margin-top: auto;
-	color:black;
-	text-align: left;
-}
-.underskrift {
-      color: black;
-    text-align: left;
-    font-size: 18px;
-
-}
-.infobilleder {
-    background-color: #ffffff;
-    border-radius: 6px;
-    padding: 34px 2px 2px;
-    text-align: center;
-    font-size: 35px;
-    color: white;
-    margin-bottom: 93px;
-    height: 200px;
-    width: 336px;
-    margin-top: -76px;
- }
-
-.textbilleder {
-    color: black;
-    text-align: left;
-    margin-left: 33px;
-    margin-top: -19px;
-    font-size: 18px;
-
-}
-.infovenner {
-    background-color: #ffffff;
-    border-radius: 6px;
-    padding: 34px 2px 2px;
-    text-align: center;
-    font-size: 35px;
-    color: white;
-    margin-bottom: 93px;
-    height: 400px;
-    width: 336px;
-    margin-top: -76px;
- }
- ul#results{
+ul#results{
 	list-style: none;
     width: 131px;
     margin: 0;
@@ -495,93 +408,3 @@ ul#results li a {
 ul#results li a:hover {
 	background: #aaa;
 }
-.coverbilledetext
-{
-
-border-radius: 12px;
-    font-size: 15px;
-    color: black;
-    margin-left: 300px;
-    position: absolute;
-
-
-}
-#profile-upload{
-    background-image:url('');
-    background-size: cover;
-    background-position: center;
-    height: 190px;
-    width: 190px;
-    border: 1px solid #bbb;
-    position: relative;
-    border-radius: 250px;
-    overflow: hidden;
-    position: absolute;
-    margin-top: 12%;
-    margin-left: 8vw;
-}
-#profile-upload:hover input.upload{
-  display:block;
-}
-#profile-upload:hover .hvr-profile-img{
-  display:inline-block;
- }
-#profile-upload .fa{   margin: auto;
-    position: absolute;
-    bottom: -4px;
-    left: 0;
-    text-align: center;
-    right: 0;
-    padding: 6px;
-   opacity:1;
-  transition:opacity 1s linear;
-   -webkit-transform: scale(.75); 
- 
- 
-}
-#profile-upload:hover .fa{
-   opacity:1;
-   -webkit-transform: scale(1); 
-}
-#profile-upload input.upload {
-    z-index:1;
-    left: 0;
-    margin: 0;
-    bottom: 0;
-    top: 0;
-    padding: 0;
-    opacity: 0;
-    outline: none;
-    cursor: pointer;
-    position: absolute;
-    background:#ccc;
-    width:100%;
-    display:none;
-}
-
-#profile-upload .hvr-profile-img {
-  width:100%;
-  height:100%;
-  display: none;
-  position:absolute;
-  vertical-align: middle;
-  position: relative;
-  background: transparent;
- }
-#profile-upload .fa:after {
-    content: "";
-    position:absolute;
-    bottom:0; left:0;
-    width:100%; height:0px;
-    background:rgba(0,0,0,0.3);
-    z-index:-1;
-    transition: height 0.3s;
-    }
-
-#profile-upload:hover .fa:after { height:100%; }
-
-
-
-
-
-

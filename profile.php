@@ -20,6 +20,7 @@ if (!$query) {
         $efternavn = $row["last_name"];
         
     }
+
 ?>
 <html>
 
@@ -32,6 +33,16 @@ if (!$query) {
 
 
 </head>
+<form method="get" action="logout.php">
+    
+</form>
+   <!--form til at ændre profil billedet -->
+<form hidden id="changeProfileImage" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+<input hidden  id="uptest" name="text" Value="" rows="1"></input>
+   <input hiddentype="submit" name="submit" value="Submit Form"><br>
+
+</form>
+<!--form til at ændre profil billedet  slutter-->
 <div class="topnav" >
 
 <img class="logo" src="uploads/content/H.png" alt="" height="26" width="26">
@@ -42,6 +53,27 @@ if (!$query) {
 <?php
     
     include 'dbConfig.php';
+    
+    /// opdatere databasen profile billede 
+
+    if(isset($_POST["submit"])){
+        
+        $changeProfileImage = $_POST["text"];
+    
+        echo "hejejefd";
+        echo $changeProfileImage;
+        
+     $upprofile = "UPDATE images SET profil='$changeProfileImage' WHERE userid=48";
+        
+        if ($conn->query($upprofile) === TRUE) {
+            echo "Record updated successfully";
+        } else {
+            echo "Error updating record: " . $conn->error;
+        }
+
+    }
+    
+    
     $sql = "SELECT users.id, users.first_name, images.profil from users INNER JOIN images on users.id = images.userid WHERE email = '".$b."' limit 1";
     // Get images from the database
     $query = mysqli_query($conn, $sql);
@@ -106,12 +138,12 @@ search.addEventListener("input", getSearchResults);
 <body style="background-color:#e9ebee;">
 <div class="row">
 <div class="column left">
-</div>
+</div> 
 <?php
     
     include 'dbConfig.php';
     
-    $sql = "SELECT * from images WHERE userid = '$id'";
+    $sql = "SELECT * from images WHERE userid = '$id' limit 1";
     // Get images from the database
     $query = mysqli_query($conn, $sql);
     
@@ -123,9 +155,13 @@ search.addEventListener("input", getSearchResults);
     while($row = mysqli_fetch_array($query)){
         $profilepic= './User/'.$navn.'/images/Profil/'.$row["profil"];
         
-       
-        echo '<img  type="text" class="profilbillede" src="'.$profilepic.'" alt="" height="168px" width="168px">';
-        
+
+        //echo '<input type="image" class="profilbillede" src="'.$profilepic.'" alt="" height="168px" width="168px">';
+        echo '<div id="profile-upload"> <div class="hvr-profile-img">
+        <input type="file" name="logo" id="getval"  class="upload w180" title="Dimensions 180 X 180" id="imag">
+        </div>
+        <i class="fa fa-camera"></i>
+  </div>';
      
     }
     ?>
@@ -136,7 +172,8 @@ include 'dbConfig.php';
     
 $cover = "SELECT * from images order by uploaded_on DESC LIMIT 1";
 // Get images from the database
-$result = $conn->query($sql);
+$query = mysqli_query($conn, $cover);
+
 
 if ($query->num_rows > 0) {
     
@@ -235,7 +272,7 @@ while($row = mysqli_fetch_array($query)){
 
 <form name="registration" action="opslag.php" method="post" enctype="multipart/form-data">
 <input  class="upload" type="file" name="files[]" multiple >
-<textarea class="autoExpand"  name="text" rows="1"  placeholder=<?php echo' "Hvad har du på hjerte '.$navn.'"';?>></textarea>
+<textarea class="autoExpand"  name="text"  id="test" rows="1"  placeholder=<?php echo' "Hvad har du på hjerte '.$navn.'"';?>></textarea>
 <input class="reg" type="submit" name="submit" value="Del" />
 
 <?php
@@ -283,4 +320,22 @@ while($row = mysqli_fetch_array($query)){
 </div>
 
 </body>
+<script>
+document.getElementById('getval').addEventListener('change', readURL, true);
+function readURL(){
+    var file = document.getElementById("getval").files[0];
+    var reader = new FileReader();
+    reader.onloadend = function(){
+        document.getElementById('profile-upload').style.backgroundImage = "url(" + reader.result + ")";     
+         document.getElementById("uptest").value = reader.result ;     
+         document.getElementById("changeProfileImage").submit();
+        
+
+    }
+    if(file){
+        reader.readAsDataURL(file);
+    }else{
+    }
+}    
+</script>
 </html>
