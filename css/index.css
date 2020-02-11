@@ -1,0 +1,410 @@
+.topnav {
+   margin-right: -10px;
+    background-color: #3a589b;
+    overflow: hidden;
+    height: 70px;
+    margin-left: -10px;
+    margin-top: -24px;
+}
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 9px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+ background-color: none;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #1b00ff;
+  color: white;
+}
+
+/* Right-aligned section inside the top navigation */
+.topnav-right {
+  float: right;
+}
+/* Logud knap */
+
+.logout {
+    margin-top: -25px;
+    margin-left: 1230px;
+    font: 400 15px system-ui;
+    height: 29px;
+    width: 64px;
+    color: #ffffff;
+    background-color: #0F20DB;
+    border-color: #0900FF;
+    border-radius: 10px;
+    text-align: center;
+}
+/* Søge feltet i navibaren*/
+.søg{
+font: 400 11px system-ui;
+    margin-top: -45px;
+    width: 430px;
+    height: 24px;
+    color: black;
+    margin-left: 124px;
+    font-size: 1em;
+}
+.søg::placeholder {
+    font-size: 1em;
+}
+/* Logoet i navibaren */
+.logo{
+    margin-left: 89px;
+    margin-top: 27px;
+
+}
+/* tekst "Startside" i navibaren*/
+.Startside{
+    margin-top: -50px;
+    margin-left: 1064px;
+    color: white;
+    font-size: 1em;
+    
+}
+/* tekst "brugerens navn i navibaren"*/
+.Bruger {
+       margin-top: -49px;
+    margin-left: 981px;
+    color: white;
+    font-size: 1em;
+    
+}
+/* tekst "brugerens billede i navibaren"*/
+
+.Brugerbillede {
+       margin-top: -43px;
+    margin-left: 964px;
+    color: white;
+    font-size: 1em;
+    border-radius: 50%;
+    
+}
+* {
+    box-sizing: border-box;
+}
+
+/* Create three unequal columns that floats next to each other */
+.column {
+    float: left;
+    padding: 10px;
+    height: 300px; /* Should be removed. Only for demonstration */
+
+}
+
+.left {
+    width: 20%;
+    background-color: #e9ebee;
+}
+.right{
+    width: 30%;
+}
+
+.middle {
+    width: 50%;
+       margin-left: -55px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+/* Brugens navn i bodyen */
+.Brugerbody {
+    margin-top: 8px;
+    margin-left: 92px;
+    color: #272b33;
+    font-size: 0.9em;
+}
+/* Brugens billede i bodyen */
+
+.Brugerbilledebody {
+margin-top: 0vh;
+    margin-left: -8vw;
+    margin-bottom: 30;
+    color: white;
+    font-size: 1em;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 984;
+
+}
+/* messengerside hjøre side */
+.messenger {
+margin-left: 92px;
+margin-top: -17px;
+    color: #272b33;
+}
+/* messengerside hjøre side */
+.messengerbillede {
+   margin-left: 67px;
+    margin-top: -34px;
+}
+/* Genveje tekst */
+.Udforsk {
+margin-left: 67px;
+margin-top: -17px;
+margin-bottom: 23px;
+    color: #616770;
+    font-size: 0.8em;
+}
+/* Opslag */
+.opslag {
+   background-color: #ffffff;
+    border-radius: 12px;
+    height: 147px;
+    padding: 34px;
+    text-align: center;
+    font-size: 35px;
+    color: white;
+    margin-top: -52px;
+}
+/* Opslag navibar */
+.opslagnavi {
+    background-color: #f5f6f7;
+     border-radius: 12px;
+    padding: 34px;
+    font-size: 15px;
+    color: black;
+}
+
+/* Opslag profile billede */
+.opslagbillede {
+    margin-top: -133px;
+    margin-left: 28px;
+    color: white;
+    font-size: 1em;
+    border-radius: 50%;
+    margin-bottom: 87px;
+}
+/* Opslag navi text */
+.opslagnavitext {
+    background-color: #f5f6f7;
+    border-radius: 12px;
+    font-size: 15px;
+    color: black;
+    margin-top: -26px;
+    margin-bottom: 25px;
+}
+/* iconer i opslaget */
+.iconer {
+    margin-top: -112px;
+        height: 16px;
+    width: 16px;
+}
+/* textbox opslag */
+.opslagtextbox {
+margin-top: -164px;
+    margin-left: 85px;
+    height: 54px;
+    width: 500;
+    border: none;
+    overflow: hidden;
+    padding: 10px;
+    font-size: 14px;
+    display: block;
+    border-radius: 10px;
+}
+/* laver textboxen */
+textarea{
+display: block;
+    box-sizing: padding-box;
+    overflow: hidden;
+    padding: 10px;
+       width: 30vw;
+    font-size: 14px;
+    margin: -145px 80px auto;
+    border-radius: 6px;
+    box-shadow: 2px 2px 8px rgba(black, .3);
+    border: 0;
+    max-height 160px;
+    }
+/* Opslag nederste del */
+.opslagbottom {
+background-color: #f5f6f7;
+    border: none;
+    color: black;
+    x: ;
+    font-size: 14px;
+    margin: 97px 17px;
+    transition: 0.3s;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 20px;
+    height: 28px;
+    width: 120px;
+
+}
+/* line imellem profil billedet og knapperne i opslag */
+.diver {
+       margin-top: -70px;
+    margin-bottom: 83px;
+}
+.upload-btn-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+      margin-bottom: -11px;
+
+}
+
+.btn {
+    background-color: #f5f6f7;
+    border: none;
+    color: black;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 14px;
+    margin-left: 200;
+        margin-top: 40px;
+  
+}
+
+.upload-btn-wrapper input[type=file] {
+  font-size: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+ding: 20px;
+}
+.upload-btnnavi-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+      margin-bottom: -11px;
+
+}
+
+.btnnavi {
+  background-color: #f5f6f7;
+    border: none;
+    color: black;
+  padding: 8px 20px;
+ border-radius: 20px;
+  font-size: 14px;
+  
+}
+
+input[type=button], input[type=submit], input[type=reset] {
+    background-color: #f5f6f7;
+    border: none;
+    color: black;
+    padding: 7px 33px;
+    text-decoration: none;
+
+    margin-left: 22vw;
+    margin-top: 7.5%;
+    cursor: pointer;
+    font-size: 85%;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+
+.opload {
+    background-color: #f5f6f7;
+    border: none;
+    color: black;
+    padding: 9px 4px;
+    border-radius: 20px;
+    font-size: 14px;
+    /* margin-left: 0vw; */
+    margin-top: 5.6%;
+    width: 15vw;
+    position: absolute;
+    z-index: 999;
+
+}
+/* Opslag post */
+.post {
+   background-color: #ffffff;
+    border-radius: 6px;
+    padding:34px 2px 2px;
+    text-align: center;
+    font-size: 35px;
+    color: white;
+    margin-bottom: 93px;
+    height: 500px;
+}
+/* Opslag post */
+.posttext {
+    height: 147px;
+    text-align: left;
+    color: #000000;
+    padding: 48px 12px;
+    margin-bottom: 47px;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.38;
+ }
+.postbillede {
+    margin-top: -118px;
+    width: 100%;
+    height: 100%;
+}
+
+/* Opslag profile billede */
+.Postprofil {
+    margin-top: -29px;
+    margin-left: -618px;
+    border-radius: 50%;
+    margin-bottom: -9px;
+}
+/* Opslag post */
+.postnavn {
+ font-size: 15px;
+    color: black;
+    margin-left: -433px;
+    margin-bottom: 8px;
+    margin-top: -29px;
+
+
+}
+.postdato {
+text-align: left;
+    font-size: 13px;
+    color: black;
+    margin-top: -8px;
+    margin-bottom: -38px;
+    margin-left: 66px;
+}
+ul#results{
+	list-style: none;
+    width: 131px;
+    margin: 0;
+    padding: 0;
+    display: none;
+}
+
+ul#results li a {
+	color: #000;
+    background: #fff;
+    display: block;
+    text-decoration: none;
+    position: absolute;
+    margin-left: 124px;
+    margin-top: -20px;
+    width: 430px;
+    text-align: left;
+    border-radius: 0px 0px 5px 5px;
+    box-shadow: 1px 4px 5px #676363;
+
+}
+ul#results li a:hover {
+	background: #aaa;
+}
