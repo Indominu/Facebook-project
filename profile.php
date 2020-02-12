@@ -187,14 +187,27 @@ while($row = mysqli_fetch_array($query)){
 ?>
 <form name="registration" action="uploadcover.php" method="post" enctype="multipart/form-data">
 <input  class="opload" type="file" name="files[]"  multiple >
-<input class="opdater" type="submit" name="submit" value="Opdater/coverbillede" />
+<input class="opdater" type="submit" name="submit" value="Opdater/coverbillede"/>
 </form>
-<div class="info" >
-<h4 class="overskrift" >Introduktion</h4>
-<p class="underskrift">Har studeret på: </p>
-<p class="underskrift">Bor i: </p>
-<p class="underskrift">Fra:</p>
+<div class="info">
+    <h4 style="margin: 0; color: black">Bio.</h4>
+    <form action="uploadcover.php" method="post">
+        <textarea name="bioText" style="margin: 0; width: 100%; height: 80%">
+            <?php
+                include 'dbConfig.php';
 
+                $bio = "SELECT userBio from users WHERE id =".$_SESSION["id"].";";
+                $query = mysqli_query($conn, $bio);
+
+                if ($query->num_rows > 0) {
+                    while($row = mysqli_fetch_array($query)){
+                        echo $row["userBio"];
+                    }
+                }
+            ?>
+        </textarea>
+        <input type="submit" name="submit"/>
+    </form>
 </div>
 <img class="iconer" src="uploads/content/photo.png" alt=""><div class="infobilleder" >
 <?php
