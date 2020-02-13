@@ -39,8 +39,7 @@ if (!$query) {
    <!--form til at ændre profil billedet -->
 <form hidden id="changeProfileImage" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
 <input hidden  id="uptest" name="text" Value="" rows="1"></input>
-   <input hiddentype="submit" name="test" value="Submit Form"><br>
-
+ <input hiddentype="submit" name="test" value="Submit Form"><br>
 </form>
 <!--form til at ændre profil billedet  slutter-->
 <div class="topnav" >
@@ -55,6 +54,7 @@ if (!$query) {
     include 'dbConfig.php';
     
     /// opdatere databasen profile billede 
+
 
     if(isset($_POST["test"])){
         
@@ -84,6 +84,7 @@ if (!$query) {
     }
     while($row = mysqli_fetch_array($query)){
         $navn = $row["first_name"];
+
        $imageURL = $row["profil"];
         
         echo ' <a class="Bruger" href="profile.php">'.$navn.'</a>';
@@ -145,6 +146,7 @@ search.addEventListener("input", getSearchResults);
     include 'dbConfig.php';
     
     $sql = "SELECT * from images WHERE userid = '$id' ORDER by uploaded_on ASC LIMIT 1";
+
     // Get images from the database
     $query = mysqli_query($conn, $sql);
     
@@ -187,7 +189,9 @@ while($row = mysqli_fetch_array($query)){
 ?>
 <form name="registration" action="uploadcover.php" method="post" enctype="multipart/form-data">
 <input  class="opload" type="file" name="files[]"  multiple >
+
 <input class="opdater" type="submit" name="submit" value="Opdater/coverbillede" />
+
 </form>
 <div class="info">
     <h4 style="margin: 0; color: black">Bio.</h4>
@@ -197,6 +201,7 @@ while($row = mysqli_fetch_array($query)){
                 include 'dbConfig.php';
 
                 $bio = "SELECT userBio from users WHERE id =".$id.";";
+
                 $query = mysqli_query($conn, $bio);
 
                 if ($query->num_rows > 0) {
@@ -210,6 +215,7 @@ while($row = mysqli_fetch_array($query)){
     </form>
 </div>
 <img class="iconer" src="uploads/content/photo.png" alt="" style="position: absolute;margin-top: -4.5%;"><div class="infobilleder" >
+
 <?php
     include 'dbConfig.php';
     
@@ -268,6 +274,7 @@ while($row = mysqli_fetch_array($query)){
         $navn = $row["first_name"];
         $efternavn = $row["last_name"];
         $imageURL = $row["profil"];
+
         $pen ='<img class="iconer" src="uploads/content/pen.png" alt="">';
         $photo ='<img class="iconer" src="uploads/content/photo.png" alt="">';
         $video ='<img class="iconer" src="uploads/content/video.png" alt="">';
