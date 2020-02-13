@@ -39,8 +39,7 @@ if (!$query) {
    <!--form til at ændre profil billedet -->
 <form hidden id="changeProfileImage" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
 <input hidden  id="uptest" name="text" Value="" rows="1"></input>
-   <input hiddentype="submit" name="submit" value="Submit Form"><br>
-
+ <input hiddentype="submit" name="test" value="Submit Form"><br>
 </form>
 <!--form til at ændre profil billedet  slutter-->
 <div class="topnav" >
@@ -56,17 +55,19 @@ if (!$query) {
     
     /// opdatere databasen profile billede 
 
-    if(isset($_POST["submit"])){
+
+    if(isset($_POST["test"])){
         
         $changeProfileImage = $_POST["text"];
     
-        echo "hejejefd";
-        echo $changeProfileImage;
+        //echo $changeProfileImage;
         
-     $upprofile = "UPDATE images SET profil='$changeProfileImage' WHERE userid=48";
+     $upprofile = "UPDATE images SET profil='$changeProfileImage' WHERE userid='$id'";
+   
+     echo $upprofile;
         
         if ($conn->query($upprofile) === TRUE) {
-            echo "Record updated successfully";
+            //echo "Record updated successfully";
         } else {
             echo "Error updating record: " . $conn->error;
         }
@@ -83,7 +84,8 @@ if (!$query) {
     }
     while($row = mysqli_fetch_array($query)){
         $navn = $row["first_name"];
-       $imageURL = './User/'.$navn.'/images/Profil/'.$row["profil"];
+
+       $imageURL = $row["profil"];
         
         echo ' <a class="Bruger" href="profile.php">'.$navn.'</a>';
       echo '<img class="Brugerbillede" src="'.$imageURL.'" alt="" height="26" width="26">';
@@ -143,7 +145,8 @@ search.addEventListener("input", getSearchResults);
     
     include 'dbConfig.php';
     
-    $sql = "SELECT * from images WHERE userid = '$id' limit 1";
+    $sql = "SELECT * from images WHERE userid = '$id' ORDER by uploaded_on ASC LIMIT 1";
+
     // Get images from the database
     $query = mysqli_query($conn, $sql);
     
@@ -153,16 +156,15 @@ search.addEventListener("input", getSearchResults);
     
     
     while($row = mysqli_fetch_array($query)){
-        $profilepic= './User/'.$navn.'/images/Profil/'.$row["profil"];
+        $profilepic= "background-image: url('" + $row["profil"] + "');";
         
-
-        //echo '<input type="image" class="profilbillede" src="'.$profilepic.'" alt="" height="168px" width="168px">';
-        echo '<div id="profile-upload"> <div class="hvr-profile-img">
+?>
+ <div id="profile-upload" style="background-image: url('<?php echo $row["profil"]; ?>');"> <div class="hvr-profile-img">
         <input type="file" name="logo" id="getval"  class="upload w180" title="Dimensions 180 X 180" id="imag">
         </div>
         <i class="fa fa-camera"></i>
-  </div>';
-     
+  </div>
+     <?php
     }
     ?>
 <div class="column middle">
@@ -187,7 +189,9 @@ while($row = mysqli_fetch_array($query)){
 ?>
 <form name="registration" action="uploadcover.php" method="post" enctype="multipart/form-data">
 <input  class="opload" type="file" name="files[]"  multiple >
-<input class="opdater" type="submit" name="submit" value="Opdater/coverbillede"/>
+
+<input class="opdater" type="submit" name="submit" value="Opdater/coverbillede" />
+
 </form>
 <div class="info">
     <h4 style="margin: 0; color: black">Bio.</h4>
@@ -196,7 +200,8 @@ while($row = mysqli_fetch_array($query)){
             <?php
                 include 'dbConfig.php';
 
-                $bio = "SELECT userBio from users WHERE id =".$_SESSION["id"].";";
+                $bio = "SELECT userBio from users WHERE id =".$id.";";
+
                 $query = mysqli_query($conn, $bio);
 
                 if ($query->num_rows > 0) {
@@ -206,10 +211,11 @@ while($row = mysqli_fetch_array($query)){
                 }
             ?>
         </textarea>
-        <input type="submit" name="submit"/>
+        <input type="submit" name="submit" style="position: absolute; z-index: 34;margin-top: -2vh; margin-left: -2vw;"/>
     </form>
 </div>
-<img class="iconer" src="uploads/content/photo.png" alt=""><div class="infobilleder" >
+<img class="iconer" src="uploads/content/photo.png" alt="" style="position: absolute;margin-top: -4.5%;"><div class="infobilleder" >
+
 <?php
     include 'dbConfig.php';
     
@@ -233,9 +239,19 @@ while($row = mysqli_fetch_array($query)){
     
 ?>
 </div>
-<img class="iconer" src="uploads/content/share.png" alt=""><div class="infovenner" >
+<img class="iconer" src="uploads/content/share.png" alt="" style="position: absolute;margin-top: -4.5%;"><div class="infovenner" >
 <?php
- echo '<p class="textBilleder">Venner</p>';
+ echo '<p class="textBilleder">Venner</p><br>';
+ include 'dbConfig.php';
+    
+    $sql = "SELECT * FROM friends INNER JOIN users on users.id=userid OR users.id=friendID
+            WHERE friend='accepted' AND (users.id!=".$id." OR users.id!=".$id.");";
+    $query = mysqli_query($conn, $sql);
+
+    while($row = mysqli_fetch_array($query)){
+        
+        echo "<span style='color:black;'>".$row["first_name"]." ".$row["last_name"]."</span>";       
+    }
     
 ?>
 </div>
@@ -257,7 +273,8 @@ while($row = mysqli_fetch_array($query)){
     while($row = mysqli_fetch_array($query)){
         $navn = $row["first_name"];
         $efternavn = $row["last_name"];
-        $imageURL = './User/'.$navn.'/images/Profil/'.$row["profil"];
+        $imageURL = $row["profil"];
+
         $pen ='<img class="iconer" src="uploads/content/pen.png" alt="">';
         $photo ='<img class="iconer" src="uploads/content/photo.png" alt="">';
         $video ='<img class="iconer" src="uploads/content/video.png" alt="">';
@@ -324,8 +341,6 @@ while($row = mysqli_fetch_array($query)){
 
 
 </div>
-
-
 
 <div class="column right">
 
